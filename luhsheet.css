@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+/* heading styles */
+h1 {
+  color: black;
+  text-align: center;
+}
+h3 {
+  color: black;
+  text-align: left;
+}
+/* body and paragraph styles */
+body {
+  background-color: #f0f4f8;
+  color: #1f2937;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 70px; /* adjust to match header height */
+  overflow-y:scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+p {
+  font-family: times new roman;
+  font-size: 18px;
+  text-align: left;
+  color: black;
+}
+/* list and highlighting styles */
+ul {
+  color: black;
+}
+mark {
+  background: #FFD700;
+}
+/* classes for the boxes */
+
+.headerDiv {
+  border: 8px outset black;
+  padding: 2px;
+  margin: 18px;
+  text-align: center;
+}
+.subHeaderDiv{
+  margin: 20px auto;
+  text-align: Left;
+	
+}
+.workDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* spacing between images */
+  margin: 20px auto;
+}
+.listDiv {
+  border: 6px outset black;
+  margin: 22px;
+  text-align: center;
+}
+.bonseeDiv{
+	border: 6px outset red;
+  margin: 22px;
+  text-align: center;
+}
+.paragraphDiv {
+  margin: 10px 20px; /* top-bottom and left-right spacing */
+  padding: 10px 15px;
+  text-align: left;
+  border-left: 4px solid #ccc; 
+  width: auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f2937;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  top: 100%; /* ensures it appears below the button */
+  left: 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  margin-left: -80px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.media-player{ 
+    width: 300px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+.screen {
+    width: 100%;
+    height: 150px;
+    background-color: #111;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.control {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect using pseudo-class */
+.control:hover {
+    background-color: #555;
+}
+
+/* Active pseudo-class for button press effect */
+.control:active {
+    transform: scale(0.9);
+    background-color: #666;
+}
+
+/* Pseudo-class for progress bar styling */
+.progress-bar {
+    position: relative;
+    height: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 40%;
+    height: 100%;
+    background-color: #1db954;
+    transition: width 0.5s ease;
+}
+.section {
+  padding: 60px 20px;
+}
+
+.progress-bar:hover .progress {
+    background-color: #1ed760;
+}
+
+/* Play button specific styling */
+.play:hover {
+    color: #1db954;
+}
+
+/* Pause button specific styling */
+.pause:hover {
+    color: #ff5722;
+}
+
+/* Forward button specific styling */
+.forward:hover {
+    color: #4caf50;
+}
+
+/* Rewind button specific styling */
+.rewind:hover {
+    color: #f44336;
+}
+
+.image {
+  width: 45%; /* two images per row with some gap */
+  max-width: 500px; /* optional: control max size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.image:hover {
+    background-color: coral;
+    transform: scale(1.2);
+}
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-image: url("R.png");
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+</style>
+</head>
+</html>
